@@ -10,7 +10,7 @@ const Vote = () => {
 
     useEffect(() => {
         async function loadData() {
-            await axios.get('http://localhost:5000/votes/movie-list')
+            await axios.get('https://tdi-voting.herokuapp.com/votes/movie-list')
             .then(res => {
                 setData(res.data)
             })
@@ -27,7 +27,7 @@ const Vote = () => {
         e.preventDefault();
         const userBallot = {user: user, movies: [...data]}
         console.log("SUBMISSION: ", userBallot)
-        await axios.post('http://localhost:5000/votes/ballot', userBallot)
+        await axios.post('https://tdi-voting.herokuapp.com/votes/ballot', userBallot)
             .then(res => {console.log(res)})
             .then(() => {
                 history.push('/')

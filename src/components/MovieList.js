@@ -16,7 +16,7 @@ const MovieList = () => {
 
     const addMovie = async (e) => {
         e.preventDefault()
-        await axios.post('http://localhost:5000/votes/movie-list', {id: Date.now(), title: title})
+        await axios.post('https://tdi-voting.herokuapp.com/votes/movie-list', {id: Date.now(), title: title})
         setTitle("");
         updateList();
     }
@@ -27,7 +27,7 @@ const MovieList = () => {
     }
 
     const updateList = async () => {
-        await axios.get('http://localhost:5000/votes/movie-list')
+        await axios.get('https://tdi-voting.herokuapp.com/votes/movie-list')
             .then(res => {
                 setMovieList(res.data)
                 return movieList
@@ -36,7 +36,7 @@ const MovieList = () => {
 
     const removeMovie = async (e, _id) => {
         e.preventDefault();
-        await axios.delete(`http://localhost:5000/votes/${_id}`)
+        await axios.delete(`https://tdi-voting.herokuapp.com/votes/${_id}`)
         await updateList();
     }
 

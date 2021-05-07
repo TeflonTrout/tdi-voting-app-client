@@ -21,7 +21,7 @@ const Results = () => {
     }, [])
 
     const pullData = async () => {
-        await axios.get('http://localhost:5000/votes/results')
+        await axios.get('https://tdi-voting.herokuapp.com/votes/results')
         .then(res => {
             console.log('RESULTS: ', res.data)
             setResults(res.data)
@@ -33,11 +33,17 @@ const Results = () => {
         })
     }
 
-    function handleDataClear() {
-        axios.delete('http://localhost:5000/votes/delete/all')
-        .then(res => {
-        })
-        .then(window.location.reload())
+    async function handleDataClear() {
+        if(results.length > 1) {
+            await axios.delete('https://tdi-voting.herokuapp.com/votes/delete/all')
+            .then(window.location.reload())
+        } else (
+            console.error("DATA NOT DELETED, NEED MORE THAN 1 MOVIE AND VOTE")
+        )
+    //     if(results.length === 1) {
+    //         await axios.delete(`https://tdi-voting.herokuapp.com/votes/${results._id}`, results.deleteId)
+    //         .then(window.location.reload())
+    //     }
     }
 
     return (
@@ -47,7 +53,7 @@ const Results = () => {
                 <div className="chart-container">
                     <h1>Results:</h1>
                     <div className="chart">
-                        {results.length > 1 
+                        {results.length > 0 
                         ? <PolarArea className='result-chart'
                         data={{
                             labels: labelArr ? labelArr : [],
