@@ -1,0 +1,542 @@
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home-page {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("./images/synthwaveBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 100%;
+  min-height: 100vh;
+}
+
+.home-page .button-container {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #8e00b9e0;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 600px;
+  width: 60%;
+}
+
+.home-page .button-container h1 {
+  color: white;
+  font-size: 50px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.home-page .button-container .link-btn {
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 15px;
+  font-weight: bolder;
+  text-align: center;
+  border: 2px solid black;
+  width: 150px;
+}
+
+.home-page .button-container .link-btn:hover {
+  background-color: #01afe4;
+  -webkit-transition: .25s ease-in;
+  transition: .25s ease-in;
+}
+
+.movie-list-page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./images/synthwaveBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movie-list-page .container {
+  background-color: #8e00b9e0;
+  width: 60%;
+  min-height: 600px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.movie-list-page .container input {
+  border: none;
+  color: white;
+  font-size: 20px;
+  outline: none;
+  background: transparent;
+  border-bottom: 2px solid black;
+}
+
+.movie-list-page .container .submit-btn {
+  font-size: 16px;
+  margin: 10px;
+  border: 2px solid black;
+  outline: none;
+  background: #dda200;
+  text-align: center;
+  width: 50px;
+  padding: 4px 8px;
+  border-radius: 15px;
+}
+
+.movie-list-page .container .submit-btn:hover {
+  cursor: pointer;
+  background-color: #01afe4;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.movie-list-page .container .link-btn {
+  color: white;
+  background-color: #01afe4;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 15px;
+  font-weight: bolder;
+  text-align: center;
+  border: 2px solid black;
+  width: 120px;
+}
+
+.movie-list-page .container .link-btn:hover {
+  background-color: #a30000;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+  cursor: pointer;
+}
+
+.movie-list-page .container .back-btn {
+  color: black;
+  background-color: #01afe4;
+  padding: 8px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  border-radius: 15px;
+  font-weight: bolder;
+  text-align: center;
+  border: 2px solid black;
+  width: 150px;
+}
+
+.movie-list-page .container .back-btn:hover {
+  background-color: #dda200;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.movie-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.movie-container button {
+  border: 2px solid black;
+  outline: none;
+  font-size: 16px;
+  color: black;
+  border-radius: 15px;
+  background-color: #01afe4;
+}
+
+.ballot-page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./images/synthwaveBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ballot-page .container {
+  background-color: #8e00b9e0;
+  width: 60%;
+  min-height: 600px;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ballot-page .container form {
+  min-height: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ballot-page .container form .user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+}
+
+.ballot-page .container form .user-container input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid black;
+  color: white;
+  font-size: 16px;
+}
+
+.ballot-page .container .movie {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+}
+
+.ballot-page .container .movie input {
+  width: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 2px solid white;
+  text-align: center;
+  font-size: 16px;
+  color: white;
+  font-weight: bolder;
+}
+
+.ballot-page .container .movie input::-webkit-outer-spin-button,
+.ballot-page .container .movie input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ballot-page .container .movie input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.ballot-page .container .submit-btn {
+  background-color: #dda200;
+  border: 2px solid black;
+  color: black;
+  border-radius: 15px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  width: 150px;
+  padding: 8px 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ballot-page .container .submit-btn:hover {
+  background-color: #01afe4;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+.ballot-page .container .back-btn {
+  background-color: #dda200;
+  border: 2px solid black;
+  color: black;
+  border-radius: 15px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  width: 150px;
+  padding: 8px 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ballot-page .container .back-btn:hover {
+  background-color: #01afe4;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+.results-page {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url("./images/synthwaveBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.results-page .cheater {
+  background-color: #830000;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: black;
+}
+
+.results-page .chart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  width: 60%;
+  height: 600px;
+  background-color: transparent;
+}
+
+.results-page .chart-container h1 {
+  width: 400px;
+  border: 2px solid black;
+  text-align: center;
+  color: white;
+  background: #c7007b;
+  border-radius: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.results-page .chart-container .chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 400px;
+  height: 600px;
+}
+
+.results-page .chart-container .delete-btn {
+  outline: none;
+  border: 2px solid black;
+  background-color: #01afe4;
+  color: black;
+  margin-bottom: 15px;
+  border-radius: 15px;
+  font-size: 16px;
+  text-align: center;
+  width: 150px;
+  padding: 8px 12px;
+}
+
+.results-page .chart-container .delete-btn:hover {
+  cursor: pointer;
+  background-color: #830000;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.results-page .chart-container .back-btn {
+  background-color: #dda200;
+  border: 2px solid black;
+  color: black;
+  border-radius: 15px;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  width: 150px;
+  padding: 8px 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.results-page .chart-container .back-btn:hover {
+  background-color: #01afe4;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 900px) {
+  .home-page .button-container {
+    width: 80%;
+  }
+  .ballot-page .container {
+    min-height: 90vh;
+    width: 90%;
+  }
+  .ballot-page .container form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .ballot-page .container form .user-container {
+    width: 100%;
+  }
+  .ballot-page .container form .user-container input {
+    border-bottom: 2px solid white;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=style.css.map */
