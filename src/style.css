@@ -113,6 +113,29 @@
           align-items: center;
 }
 
+.movie-list-page .container .suggestions {
+  background-color: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
+  width: 400px;
+}
+
+.movie-list-page .container .suggestions p {
+  padding: 5px;
+  font-size: 20px;
+  color: black;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.movie-list-page .container .suggestions p:hover {
+  cursor: pointer;
+  color: #dda200;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
 .movie-list-page .container input {
   border: none;
   color: white;

@@ -7,6 +7,7 @@ const Vote = () => {
 
     const [user, setUser] = useState("");
     const [data, setData] = useState([]);
+    const names = ["Nicholas", "Mike", "Chris", "Christian", "JT", "Dom", "Angela", "Jon", "Other1", "Other2", "Other3"]
 
     useEffect(() => {
         async function loadData() {
@@ -51,7 +52,13 @@ const Vote = () => {
                 <form action="submit" onSubmit={e => submitBallot(e)}>
                     <div className="user-container">
                         <h2>User: </h2>
-                        <input type="text" placeholder="Enter Name" value={user} onChange={e => handleUserChange(e)}/>
+                        <select type="text" placeholder="Enter Name" value={user} onChange={e => handleUserChange(e)}>
+                            {names.map(name => {
+                                return(
+                                    <option key={name} value={name}>{name}</option>
+                                )
+                            })}
+                        </select>
                     </div>
                         {data.length > 0 
                         ? data.map(movie => (
