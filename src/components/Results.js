@@ -23,7 +23,7 @@ const Results = () => {
     const pullData = async () => {
         await axios.get('https://tdi-voting.herokuapp.com/votes/results')
         .then(res => {
-            console.log('RESULTS: ', res.data)
+            console.log('RESULTS: ', res)
             setResults(res.data)
             res.data.map(item => {
                 setDataArr(prevData => [...prevData, item.ranking])
@@ -34,6 +34,7 @@ const Results = () => {
     }
 
     async function handleDataClear() {
+        // await axios.get('http://localhost:5000/votes/archive')
         if(results.length > 1) {
             await axios.delete('https://tdi-voting.herokuapp.com/votes/delete/all')
             .then(window.location.reload())
@@ -107,10 +108,10 @@ const Results = () => {
                         }
                                                 
                     </div>
-                    <button className='delete-btn' onClick={e => handleDataClear(e)}>Delete Data</button>
+                    <button className='delete-btn' onClick={e => handleDataClear(e)}>Archive and Clear Data</button>
                     <Link to='/' className="back-btn">Back</Link>
+
                 </div>
-            {/* </div> */}
         </div>
     )
 }

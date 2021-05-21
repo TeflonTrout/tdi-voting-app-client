@@ -363,6 +363,72 @@ $third: rgba(#dda200, $alpha: 1.0);
     }
 }
 
+.archive-page {
+    background-image: url('./images/synthwaveBackground.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    .container {
+        width: 80%;
+        background: rgba(255, 255, 255, 0.644);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15px;
+        padding: 25px;
+        .navigation {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+            select {
+                background: black;
+                color: white;
+                outline: none;
+                border: none;
+                font-size: 16px;
+                border-radius: 15px;
+                padding: 0 5px 0 5px;
+            }
+            select:hover {
+                cursor:pointer;
+            }
+            a {
+                text-align: center;
+                padding: 2px 8px 2px 8px;
+                border-radius: 15px;
+                background: black;
+                outline: none;
+                border: none;
+                color: white;
+                transition: .15s ease-in;
+            }
+            a:hover {
+                background: $primary;
+                transition: .15s ease-in;
+            }
+        }
+        .data-card {
+            margin: 10px;
+        }
+        .card {
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-width: 80%;
+        }
+    }
+}
+
 @media only screen and (max-width: 900px) {
     .home-page {
         .button-container {

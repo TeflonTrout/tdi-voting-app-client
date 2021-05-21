@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import Vote from './Vote';
 require('dotenv').config();
 
 const MovieList = () => {
@@ -8,8 +9,9 @@ const MovieList = () => {
     const [title, setTitle] = useState("");
     const [isMobile, setIsMobile] = useState(false);
     const [suggestions, setSuggestions] = useState([]);
+    const [results, setResults] = useState({});
 
-    const API_KEY = "08bd865f79a8f129e927b69c5220d722"
+    const API_KEY = process.env.REACT_APP_PASSWORD;
     const url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${title}&include_adult=false&language=en-US&page=1`;
 
     useEffect(() => {
@@ -17,11 +19,16 @@ const MovieList = () => {
             setIsMobile(true);
         }
         updateList();
-        console.log(API_KEY)
     },[])
 
-    const addMovie = async (title) => {
-        await axios.post('https://tdi-voting.herokuapp.com/votes/movie-list', {id: Date.now(), title: title})
+    const addMovie = async (movie) => {
+        // await axios.post('https://tdi-voting.herokuapp.com/votes/movie-list', {id: movie.id, title: movie.title, genre: movie.genre_ids, poster: movie.poster_path, release: movie.release_date})
+        // console.log("SEARCHING:", `https://api.themoviedb.org/3/find/${movie.id}?api_key=${API_KEY}&language=en-US&external_source=imdb_id`)
+        await axios.get(`https://api.themoviedb.org/3/movie/${movie.id}?api_key=${API_KEY}`)
+        .then((res) => {
+            console.log({id: res.data.id, title: res.data.title, genre: res.data.genres, runtime: res.data.runtime, release: res.data.release_date, poster: res.data.poster_path, rating: res.data.vote_average})
+            axios.post('http://localhost:5000/votes/movie-list', {id: res.data.id, title: res.data.title, genre: res.data.genres, runtime: res.data.runtime, release: res.data.release_date, poster: res.data.poster_path, rating: res.data.vote_average})
+        })
         setTitle("");
         setSuggestions([])
         updateList();
@@ -73,7 +80,7 @@ const MovieList = () => {
                     {suggestions.slice(0,5).map(movie => {
                         return(
                         <div key={movie.id}>
-                            <p onClick={e => addMovie(movie.title)}>{movie.title.slice(0,30)}{movie.title.length > 30 ? "..." : ""}</p>
+                            <p onClick={e => addMovie(movie)}>{movie.title.slice(0,30)}{movie.title.length > 30 ? "..." : ""}</p>
                         </div>
                         )
                     })}

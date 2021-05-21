@@ -4,6 +4,8 @@ import Home from './components/Home';
 import MovieList from './components/MovieList';
 import Vote from './components/Vote';
 import Results from './components/Results';
+import Archive from './components/Archive';
+import Data from './components/Data';
 
 function App() {
   return (
@@ -19,8 +21,14 @@ function App() {
           <Route path='/vote'>
             <Vote />
           </Route>
-          <Route>
+          <Route path='/results'>
             <Results />
+          </Route>
+          <Route path='/archive'>
+            <Archive />
+          </Route>
+          <Route path='/data'>
+            <Data />
           </Route>
         </Switch>
       </Router>

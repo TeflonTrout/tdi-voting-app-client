@@ -537,6 +537,117 @@
   cursor: pointer;
 }
 
+.archive-page {
+  background-image: url("./images/synthwaveBackground.jpg");
+  background-position: center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.archive-page .container {
+  width: 80%;
+  background: rgba(255, 255, 255, 0.644);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.archive-page .container .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.archive-page .container .navigation select {
+  background: black;
+  color: white;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 0 5px 0 5px;
+}
+
+.archive-page .container .navigation select:hover {
+  cursor: pointer;
+}
+
+.archive-page .container .navigation a {
+  text-align: center;
+  padding: 2px 8px 2px 8px;
+  border-radius: 15px;
+  background: black;
+  outline: none;
+  border: none;
+  color: white;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.archive-page .container .navigation a:hover {
+  background: #8e00b9e0;
+  -webkit-transition: .15s ease-in;
+  transition: .15s ease-in;
+}
+
+.archive-page .container .data-card {
+  margin: 10px;
+}
+
+.archive-page .container .card {
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 80%;
+}
+
 @media only screen and (max-width: 900px) {
   .home-page .button-container {
     width: 80%;

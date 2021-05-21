@@ -4,14 +4,15 @@ import axios from 'axios';
 
 const Vote = () => {
     const history = useHistory();
-
-    const [user, setUser] = useState("");
+    // const URL = "https://tdi-voting.herokuapp.com"
+    const URL = "http://localhost:5000"
+    const [user, setUser] = useState("Nicholas");
     const [data, setData] = useState([]);
-    const names = ["Nicholas", "Mike", "Chris", "Christian", "JT", "Dom", "Angela", "Jon", "Other1", "Other2", "Other3"]
+    const names = ["Nicholas", "Mike", "Chris", "Christian", "JT", "Dom", "Other1", "Other2", "Other3"]
 
     useEffect(() => {
         async function loadData() {
-            await axios.get('https://tdi-voting.herokuapp.com/votes/movie-list')
+            await axios.get(`${URL}/votes/movie-list`)
             .then(res => {
                 setData(res.data)
             })
@@ -26,9 +27,10 @@ const Vote = () => {
 
     async function submitBallot(e) {
         e.preventDefault();
-        const userBallot = {user: user, movies: [...data]}
-        console.log("SUBMISSION: ", userBallot)
-        await axios.post('https://tdi-voting.herokuapp.com/votes/ballot', userBallot)
+        const userBallot = {user: user, totalMovies: (data.length), movies: [...data]};
+        console.log("SUBMISSION: ", JSON.stringify(userBallot))
+        await axios.post(`${URL}/votes/archive`, userBallot)
+        await axios.post(`${URL}/votes/ballot`, userBallot)
             .then(res => {console.log(res)})
             .then(() => {
                 history.push('/')
@@ -64,7 +66,7 @@ const Vote = () => {
                         ? data.map(movie => (
                             <div key={movie._id} className='movie'>
                                 <h1>{movie.title}</h1>
-                                <h3>Points: <input type="number" min='1' max={data.length} onChange={e => handleRatingChange(e, movie.id)}/></h3>
+                                <h3>Points: <input type="number" min='1' max={data.length} required={true} onChange={e => handleRatingChange(e, movie.id)}/></h3>
                             </div>
                         ))
                         : <div><h1>No Movies</h1></div>
